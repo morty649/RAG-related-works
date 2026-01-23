@@ -1,0 +1,10 @@
+Robotics is the field that focuses on designing, building, and controlling machines that can sense, think, and act in the physical world
+      A robot is more than just a machine that moves; it combines mechanical parts, electronics, and intelligence to perform tasks autonomously or with human guidance.
+        The goal of robotics is to create systems that can assist, replace, or enhance human effort.
+
+Robots rely on sensors to understand their surroundings and actuators, such as motors, to interact with the environment. 
+Using control systems and algorithms, they process sensor information and decide how to move or respond. 
+Because the real world is often uncertain and changing, robots must be able to adapt to different situations rather than follow fixed instructions.
+
+Today, robotics is used in many areas, including manufacturing, healthcare, exploration, and everyday services.
+ As robots become more advanced, they are increasingly capable of working safely alongside humans, performing complex tasks, and operating in environments that are difficult or dangerous for people.

@@ -1,0 +1,8 @@
+Reinforcement learning is a way of teaching machines to make decisions by letting them learn from experience rather than instructions.
+      Instead of being told exactly what to do, a learning agent interacts with an environment, takes actions, and receives feedback in the form of rewards or penalties. Over time, the agent adjusts its behavior to maximize the total reward it receives.
+
+At the heart of reinforcement learning is a simple idea: actions have consequences. Some choices lead to good outcomes, others to bad ones, and many only reveal their value after a sequence of steps. Because of this, reinforcement learning focuses not just on immediate rewards but on long-term success. 
+An agent must balance trying new actions (exploration) with using what it already knows works well (exploitation).
+
+This learning style closely mirrors how humans and animals learn skills, from riding a bicycle to playing a game.
+ By repeatedly experimenting and improving based on feedback, reinforcement learning systems can eventually discover effective strategies in complex and uncertain environments, even when no clear “right answer” is provided in advance.
