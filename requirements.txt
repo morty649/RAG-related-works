@@ -6,7 +6,6 @@ tiktoken
 langchain-community
 langchain-openai
 chromadb
-sentence-transformers
 pypdf
 python-dotenv
 ipykernel
@@ -19,3 +18,8 @@ docx2txt
 nltk
 openpyxl
 jq
+matplotlib
+
+# Requirements for Embedding
+langchain-huggingface
+sentence-transformers

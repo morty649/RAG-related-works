@@ -62,3 +62,8 @@ SQL databases can be loaded through
 
 or also creating a custom loader which makes it a readable document by LLM
 
+Cosine Similarity :
+
+    Cosine Similarity =     A.B / |A||B|
+
+
