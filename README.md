@@ -66,4 +66,4 @@ Cosine Similarity :
 
     Cosine Similarity =     A.B / |A||B|
 
-
+There is a chance to work with OPENAI embedding models but that is pricey
