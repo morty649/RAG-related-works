@@ -67,3 +67,4 @@ Cosine Similarity :
     Cosine Similarity =     A.B / |A||B|
 
 There is a chance to work with OPENAI embedding models but that is pricey
+So i considered to go with huggingface models which give same results 90 percent of time

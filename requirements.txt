@@ -23,3 +23,6 @@ matplotlib
 # Requirements for Embedding
 langchain-huggingface
 sentence-transformers
+
+google-genai
+langchain-google-genai
