@@ -107,3 +107,82 @@ Initializing an embedding model got easier
 That specific model is used because no api key required and opensource for embedding
 
 Semantic Chunking - if similarity between chunks are above threshold append one to another to give meaningful context
+
+
+------------------------------------------------------------------------------------------------------------------
+
+
+Combining dense and Sparse Matrices to get better at Retrieval Augumented Generation
+
+Sparse => TF-IDF
+Dense  => ( Embeddings + Cosine Similarity )
+
+    Score(hybrid) = alpha * Score(dense) + ( 1 - alpha ) * Score(sparse)
+
+Better RAG model
+
+
+
+Key Benefits of Hybrid Search
+
+    1. Boosts Recall
+
+        BM25 catches exact keyword matches
+
+        Semantic search captures meaning even when wording differs
+
+        Together, you reduce the chance of missing relevant documents
+
+    2. Handles Synonyms & Rephrasing
+
+        Semantic search can match queries like “create app” → “build LLM system”
+        
+        BM25 still catches exact terms like “LLM”, “app”
+
+    3. Improves Retrieval Robustness
+
+        Supports both:
+
+        Users who search with precise keywords
+
+        Users who use natural language questions
+
+    4. Preserves Lexical Importance
+
+        BM25 gives higher weight to rare or critical terms
+
+        Essential for technical, legal, or medical domains
+        (e.g., rare terms like “osteoporosis”)
+
+    5. Bridges Document Diversity
+
+        Works well across mixed data sources:
+
+        Web pages
+
+        PDFs
+
+        Blogs
+
+        Well-structured + loosely written text
+
+        Hybrid retrieval adapts better than either method alone
+
+    6. Easy to Tune with Weights
+
+        You can control how much each method influences the final result:
+
+            final_score = 0.7 * semantic_score + 0.3 * bm25_score
+
+
+        This makes optimization simple and flexible.
+
+    7. More Tolerant to Typos & Variants
+
+        Semantic models handle:
+
+        Misspellings
+
+        Word variants
+
+        BM25 alone may fail here, but hybrid search catches more cases.

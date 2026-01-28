@@ -26,3 +26,6 @@ sentence-transformers
 
 google-genai
 langchain-google-genai
+
+
+rank_bm25
