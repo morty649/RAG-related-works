@@ -236,3 +236,4 @@ HyDE : Hypothetical Document Embeddings
     Before sending the query into the RAG pipeline it is sent to llm which then returns imaginary answer to the query which is then scored on similarity
     
 Multimodal -> Text and Images Understanding
+        Waah Man This is great I am working on this 
