@@ -225,4 +225,14 @@ When not to use :
     Query Enhancement is using a LLM to broaden the query in a similar way to vector database chunks such that it becomes meaningful and easier to compare and retrieve results
 
     After all understood how LCEL is built and built my own for Query Enhancement
+
+
+Query Decomposition :
+    * LLM + prompt to decompose
+    * Regular Expression ["\n\n/.,*()"]
+    Query is broken down into subqueries that call the retriever many times => LLM calls many times => Answer by Synthesising or connecting the dots => Final Answer
+
+HyDE : Hypothetical Document Embeddings 
+    Before sending the query into the RAG pipeline it is sent to llm which then returns imaginary answer to the query which is then scored on similarity
     
+Multimodal -> Text and Images Understanding
