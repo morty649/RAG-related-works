@@ -259,3 +259,6 @@ Middleware :
     - Human in the Loop - email sending example 
     - for many more visiting the docs of langchain for middleware is necessary
 
+LangGraph 
+    
+    creating a basic graph
