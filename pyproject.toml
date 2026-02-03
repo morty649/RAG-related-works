@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "arxiv>=2.4.0",
     "chromadb>=1.4.1",
     "docx2txt>=0.9",
     "faiss-cpu>=1.13.2",
@@ -33,4 +34,5 @@ dependencies = [
     "sentence-transformers>=5.2.0",
     "tiktoken>=0.12.0",
     "unstructured[all-docs,docx]>=0.18.27",
+    "wikipedia>=1.4.0",
 ]
