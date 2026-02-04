@@ -278,3 +278,13 @@ Different Streaming Techniques
      There are two types of stream_modes : values and updates
      values - the whole conversation from start to latest
      updates - the latest only
+
+     .astream() is used to get not only the states of the graph but also where the llm is called , every minute detail , every specific event such as on_chat_start,on_chat_end,on_chat_model_start,on_chat_model_stream,etc
+
+Debugging all of this via Langsmith :
+    Dependency:
+
+        langgraph-cli[inmem]
+
+    a langgraph.json file for configuration and the main file for accessing the agent through langsmith
+
