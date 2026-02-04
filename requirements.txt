@@ -35,3 +35,6 @@ rank_bm25
 langgraph
 arxiv
 wikipedia
+
+# debugging
+langgraph-cli[inmem]

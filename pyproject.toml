@@ -21,6 +21,7 @@ dependencies = [
     "langchain-openai>=1.1.7",
     "langchain-text-splitters>=1.1.0",
     "langgraph>=1.0.7",
+    "langgraph-cli[inmem]>=0.4.12",
     "matplotlib>=3.10.8",
     "nltk>=3.9.2",
     "openpyxl>=3.1.5",
