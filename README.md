@@ -1,4 +1,4 @@
-Learnings And Projects related to
+Beginner friendly repo that helps learn RAG from scratch
 
 RETRIEVAL AUGMENTED GENERATION (RAG)
 using LangChain and LangGraph
