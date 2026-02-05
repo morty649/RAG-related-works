@@ -289,3 +289,17 @@ Debugging all of this via Langsmith :
     a langgraph.json file for configuration and the main file for accessing the agent through langsmith
     It helps very much
 
+    After creating an agent and going into the directory that contains the agent file and langgraph.json file run
+
+        langgraph dev
+    
+    or if safari browser 
+
+        langgraph dev --tunnel
+
+Agentic RAG
+    
+    Think → Retrieve → Observe → Reflect → Final Answer
+
+In this LLM has the capability to call multiple tools for multiple vector databases and also for multiple purposes
+
