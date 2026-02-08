@@ -563,6 +563,22 @@ Adaptive RAG :
 -      Capital of India - Simple - Answer itself : Delhi,
 -      What is the relationship between AI slop and increase of RAM prices - Complex : Dig deeper for retrieval
 
-Still not done include : Multi_agent_workflow and Autonomous Agent with all of the combined features
+
 
 RAG with Persistant memory using LangGraph
+
+
+Cache Augumented Generation : 
+Example : 1st search "what is langgraph"
+        2nd search "what is langgraph"
+        3rd search "explain about langgraph"
+
+        this takes time so a cache dictionary with key as query and value as result will be stored and can be accessed by llm directly  
+
+There are two types 
+- direct hit from cache which involves equality of query 
+- Semantically equality in cache
+
+
+
+Still not done include : Multi_agent_workflow and Autonomous Agent with all of the combined features
