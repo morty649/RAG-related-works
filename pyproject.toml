@@ -19,6 +19,7 @@ dependencies = [
     "langchain-groq>=1.1.1",
     "langchain-huggingface>=1.2.0",
     "langchain-openai>=1.1.7",
+    "langchain-tavily>=0.2.17",
     "langchain-text-splitters>=1.1.0",
     "langgraph>=1.0.7",
     "langgraph-cli[inmem]>=0.4.12",

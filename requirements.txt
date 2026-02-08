@@ -38,3 +38,6 @@ wikipedia
 
 # debugging
 langgraph-cli[inmem]
+
+#multi-agents
+langchain-tavily

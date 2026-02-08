@@ -3,6 +3,8 @@ Beginner friendly repo that helps learn RAG from scratch
 RETRIEVAL AUGMENTED GENERATION (RAG)
 using LangChain and LangGraph
 
+    Different types of Projects included are made with open source LLMs used for embedding and for reasoning
+    To run this repo : 1. Create a .env file and add GROQ_API_KEY(important),TAVILY_API_KEY(secondary)
 
 1. For installation of uv :
 
@@ -312,18 +314,224 @@ There is a project in AgenticRAG subfolder where
 Autonomous RAG
     It is a type of RAG where an LLM(or agent) is capable of reasoning,planning,acting,reflecting and improving - on its own without the intervention of a "Human"
 
-    If a Query is given it is broken into structured sub-queries through 
-    1.Query Planning and Decomposition after that those sub-queries are given to Agent to create sub-sub reasoning steps through 
-    2. Chain of Thoughts then they are 
-    (React -> Act -> Observed ) by 
-    3.Agentic RAG followed by 
-    4.Iterative Retrieval Check where its like checking whether the response is accurate enough and then goes into a iterative loop to get the answer better through multiple steps then the
-    5. Answer is Synthesised from multiple nodes aka multiple sources after which 
-    6.self reflection occur and if it fails self reflection it goes back to iterative retrieval 
-    If good it ends with reply to the user.
+STAGE 0 — Goal Intake
+
+Type: Pipeline Stage (Entry)
+
+Input
+
+User query
+
+Optional system constraints
+
+Responsibility
+
+Capture the task intent
+
+Normalize input into a goal representation
+
+Output
+
+Goal: a clean, explicit task statement
+
+STAGE 1 — Query Planning & Decomposition
+
+Type: Pipeline Stage (Control)
+
+Input
+
+Goal
+
+Responsibility
+
+Decide what needs to be done
+
+Break the goal into structured sub-tasks or sub-queries
+
+Determine execution strategy
+
+Output
+
+TaskPlan: ordered or parallelizable sub-queries
+
+Notes
+
+This stage decides what to solve, not how
+
+STAGE 2 — Tool-Oriented Execution (Agentic RAG)
+
+Type: Pipeline Stage (Execution)
+
+Input
+
+TaskPlan
+
+Responsibility
+
+Execute sub-queries using tools and knowledge sources
+
+Perform retrieval, API calls, and external searches
+
+Observe and collect evidence
+
+Output
+
+Observations: raw retrieved documents, tool outputs, logs
+
+Included Policies
+
+ReAct (Reason → Act → Observe)
+Governs how tools are chosen and invoked
+
+Iterative Retrieval
+Refines search queries based on missing or weak evidence
+
+Notes
+
+This stage may loop internally
+
+It does not judge correctness
+
+STAGE 3 — Knowledge Consolidation (Answer Synthesis)
+
+Type: Pipeline Stage (Construction)
+
+Input
+
+Observations
+
+Responsibility
+
+Combine evidence from multiple sources
+
+Resolve overlaps and redundancies
+
+Build a coherent internal explanation
+
+Output
+
+DraftAnswer: a synthesized, structured response
+
+Notes
+
+No validation or approval happens here
+
+STAGE 4 — Self-Reflection (Evaluation)
+
+Type: Pipeline Stage (Evaluation)
+
+Input
+
+DraftAnswer
+
+Original Goal
+
+Responsibility
+
+Evaluate correctness and completeness
+
+Identify missing, weak, or incorrect elements
+
+Decide whether the agent should stop or continue
+
+Output
+
+ReflectionResult:
+
+PASS → answer is sufficient
+
+FAIL → feedback describing what must improve
+
+Notes
+
+This stage never retrieves or generates content
+
+It only judges and provides feedback
+
+STAGE 5 — Adaptive Loop (Autonomy Core)
+
+Type: Control Logic (Not a content stage)
+
+Input
+
+ReflectionResult
+
+Responsibility
+
+Route the agent based on reflection outcome
+
+Decide whether to:
+
+re-enter execution (Stage 2)
+
+re-synthesize (Stage 3)
+
+or terminate
+
+Output
+
+Updated execution path
+
+Notes
+
+This loop enables self-improvement and autonomy
+
+STAGE 6 — Finalization
+
+Type: Pipeline Stage (Exit)
+
+Input
+
+Approved DraftAnswer
+
+Responsibility
+
+Format and present the final output
+
+Terminate agent execution
+
+Output
+
+FinalAnswer
+
+Cross-Cutting Concepts (Not Pipeline Stages)
+
+These concepts operate inside multiple stages and should not be modeled as standalone steps.
+
+Chain of Thought
+
+Type: Reasoning Mode
+
+Used In
+
+Planning
+
+Tool execution
+
+Synthesis
+
+Reflection
+
+Role
+
+Enables structured internal reasoning
+
+Not exposed as a pipeline stage
+
+Memory (Optional)
+
+Type: System Capability
+
+Used For
+
+Storing feedback
+
+Improving future planning and retrieval
+
+Logging failures or successful strategies
 
         Iterative Retrieval : “I didn’t find enough info, let me search again.”
-        Self Reflection : “I didn’t find enough info, let me search again.”
+        Self Reflection : “I didn’t find enough info,why? What should I change?”
 
 
 
@@ -331,5 +539,21 @@ Autonomous RAG
 ![Alt text](Autonomous_RAG/corecompsofautonomousrag.png)
 
 ![alt text](Autonomous_RAG/agenticvsautonomous.png)
+
+
+Worked on each individual aspect of autonomy of an agent - working on a single agent that does all these - integration ⨓
+
+
+Corrective RAG : 
+- An Advanced Type of RAG where self-reflection and self-grading is incorporated to imporove the accuracy and relevancy of generated response.
+
+- Robust System, Improved Accuracy and Enhanced Relevance are some of the features.
+
+- It helps in refining or replacing incorrect retrievals
+
+- Why ? Traditional RAG Systems rely heavily on accuracy of retrieved docs. If the retrieved info is flawed or incomplete. The generated response can be inaccurate.
+
+- In this only self-grading is done.
+
 
 
