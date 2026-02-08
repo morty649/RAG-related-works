@@ -555,5 +555,11 @@ Corrective RAG :
 
 - In this only self-grading is done.
 
+Adaptive RAG :
+- A RAG System that dynamically adjusts its strategy for handling queries based on their complexities
 
+- It simply classifies whether to dig deeper into understanding and retrieving the result for the query or just answer the query itself from its own knowledge
+
+- Ex : Capital of India - Simple - Answer itself : Delhi,
+-      What is the relationship between AI slop and increase of RAM prices - Complex : Dig deeper for retrieval
 
